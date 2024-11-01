@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Welcome Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/login.css}"> 
+</head>
+<body class = "body" >
+<div class = "container">
+<div class = "nav">
+<div class="text-light">
+		<nav class="navbar navbar-expand-lg fixed-top">  <!-- Brand -->
+  <a class="navbar-brand text-light" href="#" ><b>Mysuru City Corporation</b></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="navbar-collapse container">
+  <div class ="row col-md-8">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" th:href="@{/}"><b>Home</b></a>
+      </li>
+      <li class="navbar-nav">
+      	<a class = "nav-link text-light" th:href = "@{/about}"><b>About</b></a>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="text-right">
+  <div class ="row col-md-4">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" th:href="@{/HelpLogin}"><b>Help</b></a>
+      </li>
+      <li class="navbar-nav">
+      	<a class = "nav-link text-light" th:href = "@{/registration}"><b>Register</b></a>
+      </li>
+    </ul>
+    </div>
+  </div>
+  </div>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class = "container">
+		<div class = "row">
+			<div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+			<h1 class = "text-center text-primary">Login</h1>
+			<div class = "card-body">
+				 
+			<form th:action = "@{/LoginPage}" method = "post">
+				
+				<div th:if = "${param.error}">
+					<div class = "alert alert-danger">Invalid username or password.</div>
+				</div>
+				
+				<div th:if = "${param.logout}">
+					<div class = "alert alert-info">You have been logged out.</div>
+				</div>
+				
+				<div class = "form-group">
+						<label>Email id </label>
+						<input
+						type = "text"
+						name = "username"
+						placeholder = "Enter Email ID"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					</div>
+					
+					<div class = "form-group">
+						<label>Password </label>
+						<input
+						type = "Password"
+						name = "password"
+						placeholder = "Enter your password"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					</div>
+					
+					<div class = "form-group">
+						<div class = "row">
+							<div class = "col-sm-6 col-sm-offset-3">
+								<input type = "submit" name = "login-submit" id = "login-submit"
+								class = "form-control btn btn-success" value = "log In" />
+							</div>
+						</div>
+					</div>
+					</div>
+			</form>
+			
+			<div class = "form-group">
+				<span>New user? <a  th:href = "@{/registration}">Register here</a></span>
+			</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+		<footer class="footer fot">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<p class="text-light font-weight-medium">Mysuru City Corporation,</p>
+								<p class="mb-4 text-light font-weight-medium">New Sayyaji Rao Road, Mysuru 570024.</p>
+								<div class="d-flex align-items-center">
+									<a href="" class="footer-link text-light font-weight-medium"> comm_mcc@yahoo.in</a>
+								</div>
+							</address>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom bg-primary">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="d-flex align-items-center">
+							<p class="mb-0 text-light font-weight-medium  pt-1">©2023 <a href="https://www.bootstrapdash.com" class="text-white" target="_blank">Tejaswini vb</a>. All rights reserved.</p>
+						</div>
+						<div>
+							<div class="d-flex">
+								<a href="#" class="text-light font-weight-medium text-white mx-2 footer-link">Mysore City Corporation </a>          
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="vendors/base/vendor.bundle.base.js"></script>
+		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
+		<script src="vendors/aos/js/aos.js"></script>
+		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+		<script src="js/template.js"></script>
+		</div>
+</body>
+</html>

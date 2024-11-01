@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+	<head>
+		<!-- Required meta tags --> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Mysore City Corporation</title>
+		<link rel="stylesheet" th:href="@{/vendors/mdi/css/materialdesignicons.min.css}" href = ""/>
+		<link rel="stylesheet" th:href="@{/vendors/owl.carousel/css/owl.carousel.css}" href = ""/>
+		<link rel="stylesheet" th:href="@{/vendors/owl.carousel/css/owl.theme.default.min.css}" href = ""/>
+		<link rel="stylesheet" th:href="@{/vendors/aos/css/aos.css}" href = ""/>
+		<link rel="stylesheet" th:href="@{/vendors/jquery-flipster/css/jquery.flipster.css}" href = ""/>
+		<link rel="stylesheet" th:href="@{/css/style.css}" href= ""/>
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<div id="mobile-menu-overlay"></div>
+		<nav class="navbar navbar-expand-lg fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">Mysuru City Corporation</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<div class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center">
+						<img src="images/logo-dark.svg" class="logo-mobile-menu" alt="logo">
+						<a href="javascript:;" class="close-menu"><i class="mdi mdi-close"></i></a>
+					</div>
+					<ul class="navbar-nav ml-auto align-items-center">
+						<li class="nav-item active">
+							<a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonial">events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" th:href="@{/HelpWelcome}">Help</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-success" href="/LoginPage">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-success" href="/registration">Register</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="page-body-wrapper">
+			<section id="home" class="home">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="main-banner">
+								<div class="d-sm-flex justify-content-between">
+									<div data-aos="zoom-in-up">
+										<div class="banner-title">
+												<h3 class="font-weight-medium">Corporation Management System
+											</h3>
+										</div>
+										<p class="mt-3">Mysuru City Corporation (MCC),we are responsible for civic amenities and infrastructural assets of Mysuru city in Karnataka,India.
+											<br>
+											Solve the problems in your locality by posting the issues here. 
+										</p>
+										<a th:href="@{/about}" class="btn btn-secondary mt-3">Learn more</a>
+									</div>
+									<div class="mt-5 mt-lg-0">
+										<img src="images/First.jpg" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-services" id="services">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h5 class="text-dark">Services From</h5>
+							<h3 class="font-weight-medium text-dark mb-5">Mysore City Corporation</h3>
+						</div>
+					</div>
+					<div class="row" data-aos="fade-up">
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Water supply.  
+								</h6>
+								<p>Water supply for domestic, industrial and commercial purposes 
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box"   data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Healthy Environment.								</h6>
+								<p>Public health, sanitation conservancy and solid waste management.
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Fire services.								</h6>
+								<p>Responsible for Fire services in the locality.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row" data-aos="fade-up">
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box  pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">	Provision of urban amenities and facilities							</h6>
+								<p>Responsible for providing urban amenities and facilities such as parks, gardens, playgrounds. 
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box pb-lg-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Public amenities								</h6>
+								<p>Public amenities including street lighting, parking lots, bus stops and public conveniences.
+								</p>
+							</div>
+						</div>
+						<div class="col-sm-4 text-center text-lg-left">
+							<div class="services-box pb-0" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+								<h6 class="text-dark mb-3 mt-4 font-weight-medium">Environment Protection
+								</h6>
+								<p>Urban forestry, protection of the environment and promotion of ecological aspects.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-process" id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6" data-aos="fade-up">
+							<h5 class="text-dark">Mysore City Corporation (MCC)</h5>
+							<h3 class="font-weight-medium text-dark">Muncipal Corporation of Mysore</h3>
+							<h5 class="text-dark mb-3"> the third-largest municipal corporation in Karnataka.</h5>
+							<p class="font-weight-medium mb-4">administrative body responsible for <br>
+								civic amenities and infrastructural assets of Mysore city 
+							</p>
+							<div class="d-flex justify-content-start mb-3">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">The MCC was created on 8 July 1862.</p>
+							</div>
+							<div class="d-flex justify-content-start mb-3">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">MCC was established as a municipality in 1888.</p>
+							</div>
+							<div class="d-flex justify-content-start">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">In 1977, MCC was converted into a corporation.</p>
+							</div><br>
+							<div class="d-flex justify-content-start">
+								<img src="images/tick.png" alt="tick" class="mr-3 tick-icon"  >
+								<p class="mb-0">In July 2012, MCC celebrated 150 years of existence in Amba Vilas Palace, Mysore Palace.	</p>
+							</div>
+						</div>
+						<div class="col-sm-6 text-right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+							<img src="images/idea.png" alt="idea" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<br>
+			<section class="testimonial" id="testimonial">
+				<div class="container">
+					<div class="row  mt-md-0 mt-lg-4">
+						<div class="col-sm-6 text-white" data-aos="fade-up">
+							<p class="font-weight-bold mb-3">Events</p>
+							<h3 class="font-weight-medium">The latest Events By <br>Mysore City Corporation</h3>
+							<ul class="flipster-custom-nav">
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link" title="0"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="1"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link active" title="2"></a>
+								</li>
+								<li class="flipster-custom-nav-item">
+									<a href="javascript:;" class="flipster-custom-nav-link"  title="3"></a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6" data-aos="fade-up">
+							<div id="testimonial-flipster">
+								<ul>
+									<li>
+										<div class="testimonial-item">
+											<h6 class="testimonial-author">The Mayors Online Adalat</h6>
+											<p>The Mayors Online Adalat which was launched by Mysore city corporation, aimed at helping the public reslove their long-pending grivances has recived a good response from the citizens.
+											</p>
+											<p class="testimonial-destination">Feb 13,2023</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<h6 class="testimonial-author">Building waste treatment unit.</h6>
+											<p>On the average, nearly 150 to 200 tonnes of construction waste is generated in mysore city daily, and disposal of debris has turned into particularly tricky problem so MCC has started the process to develop a unit dedicated to the treatment of demolition waste under PPP model.
+											</p>
+											<p class="testimonial-destination">Jan 21,2023</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<h6 class="testimonial-author">online facility for property tax payment</h6>
+											<p> the Mysuru City Corporation (MCC), the civic body responsible for the administration of the urban areas of Mysore city, introduced the online facility for property tax payment for the citizens. As a property owner, one is required to pay property tax every year. 
+											</p>
+											<p class="testimonial-destination"> April 2020</p>
+										</div>
+									</li>
+									<li>
+										<div class="testimonial-item">
+											<h6 class="testimonial-author">Unpaid water bills in city</h6>
+											<p>The Unpaid water bills in mysuru swell to Rs 220.5 crore."Many people are now demanding  an opportunity to pay the arrears in instalments".
+											</p>
+											<p class="testimonial-destination">Feb 26,2023</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contactus" id="contact">
+				<div class="container">
+					<div class="row mb-5 pb-5">
+						<div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
+							<img src="images/contact.jpg" alt="contact" class="img-fluid">
+						</div>
+						<div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
+							<h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Got A Problem</h3>
+							<h5 class="text-dark mb-5">Contact Mysrore city corporation, in case if the problem is major Or in case the posted issue is not sloved.</h5>
+							<p> Mysore City Corporation (MCC) has set up helplines for the public to register their complaints relating 
+								to rainwater entering their houses, overflowing manholes of the underground drainage system,
+								 falling tree branches, disruption to traffic on city roads and other matters as well as seeking redressal
+								 	 for the various civic problems faced by the residents.
+							</p>
+							<p>
+								Asst. Commissioner, Zonal Office 1 (94498-41078);<br> 
+								Asst. Commissioner, Zonal Office 2 (94498-41079);<br>
+								 Asst. Commissioner, Zonal Office 3 (94498-41080);<br>
+								  Asst. Commissioner, Zonal Office 4 (94498-41081); <br>
+								  Asst. Commissioner, Zonal Office 5 (94498-41082);<br>
+								   Asst. Commissioner, Zonal Office 6 (94498-41083);<br>
+								    Asst. Commissioner, Zonal Office 7 (94498-41084);<br>
+									 Asst. Commissioner, Zonal Office 8 (94498-41197) 
+									 and Asst. Commissioner, Zonal Office 9 (94498-41185).
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<p>Mysuru City Corporation,</p>
+								<p class="mb-4">New Sayyaji Rao Road, Mysuru 570024.</p>
+								<div class="d-flex align-items-center">
+									<a href="mailto:info@yourmail.com" class="footer-link"> comm_mcc@yahoo.in</a>
+								</div>
+							</address>
+							<div class="social-icons">
+								
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="d-flex align-items-center">
+							<p class="mb-0 text-small  pt-1">©2023 <a href="https://www.bootstrapdash.com" class="text-white" target="_blank">Tejaswini vb</a>. All rights reserved.</p>
+						</div>
+						<div>
+							<div class="d-flex">
+								<a href="#" class="text-small text-white mx-2 footer-link">Mysore City Corporation </a>          
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="vendors/base/vendor.bundle.base.js"></script>
+		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
+		<script src="vendors/aos/js/aos.js"></script>
+		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+		<script src="js/template.js"></script>
+	</body>
+</html>

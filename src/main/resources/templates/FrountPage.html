@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Corporation Management System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!--   <link rel= "stylesheet" href="last.css"> -->
+</head>
+<link rel="stylesheet" th:href="@{/css/login.css}"> 
+<body class = "bg-light">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Corporation Management System</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      </li>
+    </ul>
+    </div>
+   <form class="form-inline my-2 my-lg-0">
+      
+      <a class="btn btn-primary my-2 my-sm-0 mr-1"  th:href = "@{/LoginPage}">Login</a>
+      <a class="btn btn-primary my-2 my-sm-0" th:href = "@{/registration}">Register</a>
+    </form>
+</nav> 
+<div class="card">
+    <img   class="card-img-top img-brand" src="https://mysurucitycorporation.co.in/WebSiteMysuru/images/Slider1.jpg" alt="alt text">
+   
+    <div class="card-img-overlay region region-primary-menu">
+        <a href="#" class="text-warning text-xl"
+           data-bs-toggle="popover" data-bs-content="Edit image" data-bs-trigger="hover focus">
+            <i class="far fa-edit"></i> About 
+        </a>
+        <a href="#" class="text-warning text-xl"
+           data-bs-toggle="popover" data-bs-content="Edit image" data-bs-trigger="hover focus">
+            <i class="far fa-edit"></i> 
+            ContactUs 
+        </a>
+        <a href="#" class="text-warning text-xl"
+           data-bs-toggle="popover" data-bs-content="Edit image" data-bs-trigger="hover focus">
+            <i class="far fa-edit"></i> 
+           	Events 
+        </a>
+        </div>
+    </div>
+<br>
+<div class = "container align-start">
+<div class = "row">
+<h4 class = "text-dark">General Services From the corporation. </h4>
+
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Water supply for domestic, industrial and commercial purposes .</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Public health, sanitation conservancy and solid waste management.</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Fire services.</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Repair street lights</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Provision of urban amenities and facilities such as parks, gardens, playgrounds.</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+		      <h5 class="mb-1">Public amenities including street lighting, parking lots, bus stops and public conveniences.
+		</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Urban forestry, protection of the environment and promotion of ecological aspects.
+</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1"></p><small class="text-muted"></small>
+  </a> 
+</div>
+</div>
+</div>
+
+
+<!-- btn btn-outline-warning btn-sm float-end -->
+</body>
+</html>

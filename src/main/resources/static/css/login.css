@@ -1,0 +1,18 @@
+   .body{
+    background: linear-gradient(
+               to right, #1c19c4f3 10%, rgb(83, 98, 234) 90%);   
+               display: block;
+               }		
+.nav{
+	background-color:#1c19c4f3;
+	color:white;
+	}
+.bodyHome{
+	
+}
+.bg{
+	background-color: #1c19c4f3;
+}
+.fot{
+	background-color: #1c19c4f3
+}

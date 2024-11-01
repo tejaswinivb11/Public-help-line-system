@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add issue</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/login.css}"> 
+</head>
+<body class = "bodyHome">
+<nav class="navbar navbar-expand-md bg">
+  <!-- Brand -->
+  <a class="navbar-brand text-light" href="#"><b>Mysuru Corporation</b></a>
+<div class = "navbar container">
+<div class = "row col-sm-8">
+  <!-- Navbar links -->
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" th:href="@{/HomePage}"><b>Back</b></a>
+      </li>
+    </ul>
+  </div>
+  </div>	
+              <div class="text-right">
+      	    <div class="row col-sm-4">
+		      <ul class = "navbar-nav">
+		      <li class="nav-item">
+			        <a class="nav-link text-light" th:href="@{/}"><b>Home</b></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link text-light text-right" th:href="@{/HomePage}"><b>Help</b></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link text-light" th:href="@{/HomePage}"><b>About</b></a>
+			      </li>
+			      </ul>
+	            </div>	      
+                </div>	      
+  </div>
+</nav>
+<br>
+	<div class = "container">
+	<div class="row">
+						<div class="col-sm-12">
+							<h5 class="text-dark">Post the issue here,</h5>
+							<h4 class="font-weight-medium text-dark">Enter the Issue Details in the below form.Please do make sure to enter an appropriate details about the issue along with appropriate Location and ward number.</h4>
+							<h6 class = "mb-3">Click on the button below to post the issue.</h6>
+						</div>
+					</div>
+					</div>
+		<div class = "container">
+		<div class = "row">
+			<div class = " container card">
+			<h1 class = "text-center">Issue Details</h1>
+			<div class = "card-body">
+				<form th:action = "@{/Home}" th:object = "${issues}" method = "POST">
+					 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+					<div class = "form-group">
+						<label>Issue Details</label>
+						<input
+						type = "text"
+						name = "IssueName"
+						th:field = "*{IssueName}"
+						placeholder = "Enter the issue"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					</div>
+					
+					<div class = "form-group">
+						<label>Enter the Location of the issue </label>
+						<input
+						type = "text"
+						name = "IssueLocation"
+						th:field = "*{IssueLocation}"
+						placeholder = "Enter the issue Location"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					</div>
+						<div class = "form-group">
+						<label>
+						ward Number </label>
+						<input
+						type = "text"
+						name = "Ward"
+						th:field = "*{Ward}"
+						placeholder = "Enter your Ward number"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					<!-- </div>
+						<div class = "form-group">
+						<label>
+						Add an Image</label>
+						<input
+						type = "file"
+						name = "file"
+						placeholder = "Add an image"
+						class = "form-control"
+						required autofocus = "autofocus" 
+						/>
+					</div> -->
+					
+					
+					<div class = "box-footer">
+					<button type = "submit" class = "btn btn-success">
+					Post
+					</button>
+ 					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+		<footer class="footer fot">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<p class="text-light font-weight-medium">Mysuru City Corporation,</p>
+								<p class="mb-4 text-light font-weight-medium">New Sayyaji Rao Road, Mysuru 570024.</p>
+								<div class="d-flex align-items-center">
+									<a href="" class="footer-link text-light font-weight-medium"> comm_mcc@yahoo.in</a>
+								</div>
+							</address>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom bg-primary">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="d-flex align-items-center">
+							<p class="mb-0 text-light font-weight-medium  pt-1">©2023 <a href="https://www.bootstrapdash.com" class="text-white" target="_blank">Tejaswini vb</a>. All rights reserved.</p>
+						</div>
+						<div>
+							<div class="d-flex">
+								<a href="#" class="text-light font-weight-medium text-white mx-2 footer-link">Mysore City Corporation </a>          
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+		<script src="vendors/base/vendor.bundle.base.js"></script>
+		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
+		<script src="vendors/aos/js/aos.js"></script>
+		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+		<script src="js/template.js"></script>
+	<!-- 													
+						th:field = "*{image}"
+	 -->
+</body>
+</html>

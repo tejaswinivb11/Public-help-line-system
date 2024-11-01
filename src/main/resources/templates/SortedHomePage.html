@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body class = "bodyHome">
+<nav class="navbar navbar-expand-md bg">
+  <a class="navbar-brand text-light" href="#"><b>Mysuru City Corporation</b></a>
+    <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse container">
+  <div class ="row col-md-8">
+     <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-light" th:href="@{/HomePage}">Corporation Management</a>
+      </li>
+      </ul>
+      </div>
+            <div class="text-right">
+      	    <div class="row col-sm-4">
+		      <ul class = "navbar-nav">
+		      <li class="nav-item">
+			        <a class="nav-link text-light" th:href="@{/}"><b>Home</b></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link text-light text-right" th:href="@{/HelpAdminHome}"><b>Help</b></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link text-light" th:href="@{/about}"><b>About</b></a>
+			      </li>
+			      </ul>
+	            </div>	      
+                </div>	      
+  </div>
+  </div>
+</nav>
+<br>
+<div class="container">
+<div class="row">
+						<div class="col-sm-12">
+							<h5 class="text-dark font-weight-medium">The below are the issues posted by the general public of Mysuru district.</h5>
+							<h4 class="text-dark">Once the issues are solved make sure to update the status of the issue.</h4>
+							<h6 class = "mb-3"></h6>
+						</div>
+					</div>
+					</div>
+	<div class = "container">
+		<div class = "row col-sm-12">
+			<h1 class = "text-primary">List of Issues</h1>
+		</div>
+		<table class = "table table-striped table-bordered">
+			<thead class = "table-dark">
+				<tr>
+					<th> Issue</th>
+					<th>Issue image</th>
+					<th> Issue Location </th>
+					<th> Ward Number </th>
+					<th> Issue Status </th>
+					<th>  Action initiated  </th>
+					<th> Update Issue </th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each = "issues: ${Sort}">
+					<td th:text = "${issues.IssueName}"></td>
+					<td> <img th:src="@{${'/download/image/' +issues.id}}" style="width:150px ;height:150px;"  alt=""/></td>
+					<td th:text = "${issues.IssueLocation}"></td>
+					<td th:text = "${issues.ward}"></td>
+					<td th:text = "${issues.Status}"></td>
+					<td th:text = "${issues.Description}"></td>
+					<td><a th:href = "@{/AdminIssueEdit/{id}(id = ${issues.id})}" class="btn btn-primary">Update</a><br>
+					<a th:href = "@{/AdminIssueDelete/{id}(id = ${issues.id})}" class="btn btn-warning">Deactivate</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+		<footer class="footer fot">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<address>
+								<p class="text-light font-weight-medium">Mysuru City Corporation,</p>
+								<p class="mb-4 text-light font-weight-medium">New Sayyaji Rao Road, Mysuru 570024.</p>
+								<div class="d-flex align-items-center">
+									<a href="" class="footer-link text-light font-weight-medium"> comm_mcc@yahoo.in</a>
+								</div>
+							</address>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom bg-primary">
+				<div class="container">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="d-flex align-items-center">
+							<p class="mb-0 text-light font-weight-medium  pt-1">©2023 <a href="https://www.bootstrapdash.com" class="text-white" target="_blank">Tejaswini vb</a>. All rights reserved.</p>
+						</div>
+						<div>
+							<div class="d-flex">
+								<a href="#" class="text-light font-weight-medium text-white mx-2 footer-link">Mysore City Corporation </a>          
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="vendors/base/vendor.bundle.base.js"></script>
+		<script src="vendors/owl.carousel/js/owl.carousel.js"></script>
+		<script src="vendors/aos/js/aos.js"></script>
+		<script src="vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+		<script src="js/template.js"></script>
+</body>
+</html>
